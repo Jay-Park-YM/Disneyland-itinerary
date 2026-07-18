@@ -93,7 +93,7 @@
 
 <header>
   <h1>🏰 디즈니랜드 하루 동선</h1>
-  <div class="sub">11:00 입장 · 도시락 지참 · 5세 아이 겁쟁이 모드 · 라이드 10곳 + 블루이 쇼 + 야간쇼</div>
+  <div class="sub">11:00 입장 · 도시락 지참 · 5세 아이 겁쟁이 모드 · 라이드 9곳 + 블루이 쇼 + 야간쇼</div>
   <div class="badge-row">
     <span class="badge">🚝 모노레일로 입장</span>
     <span class="badge">⚡ LL 예약: 런어웨이→빅썬더→피터팬 순</span>
@@ -263,15 +263,32 @@
         fill="none" stroke="var(--chip)" stroke-width="3.5" stroke-linecap="round" opacity=".9"/>
   <!-- 뉴올리언스 스퀘어역 → 강변 북쪽 빅썬더 -->
   <path class="walk" d="M228 755 Q290 650 315 522" fill="none" stroke="var(--chip)" stroke-width="3.5" stroke-linecap="round" opacity=".9"/>
-  <!-- 빅썬더 → 해적 → 리버 벨 테라스 -->
-  <path class="walk" d="M315 522 Q300 640 252 728 Q285 742 322 740" fill="none" stroke="var(--chip)" stroke-width="3.5" stroke-linecap="round" opacity=".9"/>
-  <!-- 리버 벨 → 앨리스 → 퍼레이드 자리 -->
-  <path class="walk" d="M328 738 Q440 660 552 590 Q515 700 472 786" fill="none" stroke="var(--chip)" stroke-width="3.5" stroke-linecap="round" opacity=".9"/>
+  <!-- 빅썬더 → 강변 따라 리버 벨 테라스 -->
+  <path class="walk" d="M315 522 Q300 640 326 734" fill="none" stroke="var(--chip)" stroke-width="3.5" stroke-linecap="round" opacity=".9"/>
+  <!-- 리버 벨 → 피터팬(시나리오2) → 앨리스 → 퍼레이드 자리 -->
+  <path class="walk" d="M332 736 Q400 660 446 582 Q500 588 550 590 Q515 700 472 786" fill="none" stroke="var(--chip)" stroke-width="3.5" stroke-linecap="round" opacity=".9"/>
 </svg>
 </div>
 
 <div class="timeline" id="timeline">
   <div class="tl-title">⏱ 시간대별 일정</div>
+</div>
+
+<div class="section">
+  <div class="sec-title">🧭 피터팬 시나리오 요약</div>
+  <div class="panel">
+    <h4>시나리오 1 — 13:00 스탠바이 성공 (대기 40분 이하)</h4>
+    <ul class="note-list">
+      <li data-ico="✅">낮에 피터팬 완료 → 저녁 후 <b>18:40 앨리스</b> → <b>19:30 퍼레이드 자리</b>. 저녁이 여유로워지고 자리도 좋은 곳 선점.</li>
+    </ul>
+  </div>
+  <div class="panel">
+    <h4>시나리오 2 — 13:00 줄이 길어 패스</h4>
+    <ul class="note-list">
+      <li data-ico="⚡">15:55 런어웨이 태그 직후 <b>피터팬 LL 예약</b>(18~19시 리턴 목표) → 저녁 후 <b>18:40 피터팬 → 19:10 앨리스 → 19:50 자리</b>.</li>
+      <li data-ico="🔄">피터팬 LL이 매진이면: 18:40 스탠바이(저녁엔 30~40분). 대기가 그마저 길면 앨리스와 택1 — 5세 만족도는 보통 피터팬 우세.</li>
+    </ul>
+  </div>
 </div>
 
 <div class="section">
@@ -295,7 +312,7 @@
     <div class="check-list">
       <label><input type="checkbox"><span>디즈니랜드 앱 설치 + 가족 전원 티켓 연동</span></label>
       <label><input type="checkbox"><span>파크 예약 (Disneyland Park) + LL 멀티패스 사전 구매</span></label>
-      <label><input type="checkbox"><span>리버 벨 테라스 18:00 저녁 예약 (60일 전 오픈)</span></label>
+      <label><input type="checkbox"><span>리버 벨 테라스 17:20 저녁 예약 (60일 전 오픈)</span></label>
       <label><input type="checkbox"><span>유모차 + 식별용 리본/스카프 (주차 구역에서 찾기용)</span></label>
       <label><input type="checkbox"><span>돗자리 (퍼레이드 자리잡기)</span></label>
       <label><input type="checkbox"><span>도시락 + 간식 (유리 용기 ✕, 아이스팩·소프트 쿨러백 ○)</span></label>
@@ -343,7 +360,7 @@ const stops = [
   {n:1,  x:165, y:928, t:"11:00", type:"show", title:"다운타운 디즈니역 — 모노레일 승차 🚝", desc:"티켓 스캔이 곧 파크 입장! 플랫폼에서 LL 멀티패스 활성화 → 첫 예약은 매진 빠른 런어웨이 레일웨이. 유모차는 접어서 탑승, 마터호른을 내려다보며 하늘로 입장."},
   {n:2,  x:695, y:545, t:"11:15", type:"sb", title:"니모 잠수함", desc:"투모로우랜드역 하차하면 바로 앞이 니모 라군. 조기 마감 라이드라 오전 필수. 30~45분."},
   {n:3,  x:643, y:503, t:"12:15", type:"eat", title:"도시락 점심 🍱", desc:"니모 라군 바로 옆 마터호른 잔디 벤치. 이동 1분, 그늘에서 재정비."},
-  {n:4,  x:448, y:578, t:"13:00", type:"sb", title:"피터팬의 비행", desc:"판타지랜드 성 안뜰. 기본은 스탠바이 40~50분(식사 시간대라 하루 중 짧은 편). 13:05에 2시간 룰로 빅썬더 LL 예약! 오후에 피터팬 LL이 잡히면 18:30으로 미뤄 앨리스와 연달아 타는 플랜도 가능."},
+  {n:4,  x:448, y:578, t:"13:00", type:"sb", title:"피터팬의 비행 — 시나리오 분기점", desc:"실물 줄 확인: 대기 40분 이하면 탑승 → 시나리오 1 (저녁이 여유로워짐). 그 이상이면 패스하고 덤보로 → 시나리오 2 (15:55에 피터팬 LL 확보, 18:40 탑승). 어느 쪽이든 13:05에 2시간 룰로 빅썬더 LL 예약!"},
   {n:5,  x:406, y:562, t:"13:30", type:"sb", title:"덤보", desc:"바로 옆. 아이가 직접 높이 조절하는 판타지랜드 클래식. 20~30분."},
   {n:6,  x:470, y:400, t:"14:00", type:"sb", title:"잇츠 어 스몰 월드", desc:"판타지랜드 북쪽 끝 흰 파사드. 가장 더운 시간대 에어컨 보트 쿨링. 내려서 바로 뒤가 툰타운."},
   {n:7,  x:513, y:303, t:"14:30", type:"eat", title:"툰타운 놀이터 휴식", desc:"CenTOONial Park 자유놀이 + 유모차 낮잠 타임. 런어웨이 LL 윈도우가 이미 열려 있으면 이 시간에 먼저 탑승해버려도 OK."},
@@ -351,10 +368,10 @@ const stops = [
   {n:9,  x:466, y:287, t:"15:55", type:"ll", title:"미키와 미니의 런어웨이 ⚡", desc:"쇼 끝나고 툰타운으로 3분. 11시에 잡은 LL 윈도우에 맞춰 탑승. 태그 직후 피터팬 LL 시도 — 18~19시 리턴이면 잡기!"},
   {n:10, x:562, y:330, t:"16:25", type:"show", title:"디즈니랜드 철도 🚂", desc:"툰타운역 승차 → 굵은 철길 따라 시계방향(투모로우랜드·메인 스트리트 경유)으로 뉴올리언스 스퀘어역 하차. 15~20분, 그랜드캐니언 디오라마 통과."},
   {n:11, x:315, y:518, t:"16:50", type:"ll", title:"빅썬더 마운틴 ⚡", desc:"13:05에 2시간 룰로 예약해둔 LL로 탑승. 역에서 강변 따라 북쪽으로 도보 3~4분."},
-  {n:12, x:250, y:730, t:"17:20", type:"sb", title:"캐리비안의 해적 (플렉스)", desc:"대기 25분 이하면 탑승, 그 이상이면 과감히 패스하고 저녁 후 재판단(저녁엔 대기가 더 짧아짐). 어두운 구간은 안아주세요."},
-  {n:13, x:326, y:740, t:"18:00", type:"eat", title:"저녁 — 리버 벨 테라스 🍽️", desc:"예약을 18:00로 잡으세요(블루이 쇼 반영). 해적 출구에서 도보 2분, 남부식 정찬. 판타스믹 패키지 없음."},
-  {n:14, x:554, y:588, t:"19:10", type:"sb", title:"이상한 나라의 앨리스", desc:"판타지랜드 동쪽, 마터호른 옆. 저녁 시간대 대기 감소 구간. 25~35분. 해적을 패스했다면 여기 대신 해적 재도전도 선택지."},
-  {n:15, x:470, y:790, t:"19:50", type:"show", title:"퍼레이드 자리 → 야간쇼 🎆", desc:"메인 스트리트 돗자리 자리잡기 → 20:45 Paint the Night → 21:30 불꽃놀이로 피날레!"},
+  {n:12, x:326, y:740, t:"17:20", type:"eat", title:"저녁 — 리버 벨 테라스 🍽️", desc:"빅썬더에서 강변 따라 도보 3~4분, 17:20 예약. 남부식 정찬으로 1시간 재충전(판타스믹 패키지 없음)."},
+  {n:13, x:448, y:578, t:"18:40", type:"ll", title:"피터팬의 비행 — 시나리오 2 전용 ⚡", desc:"낮 13:00에 못 탄 경우만! 15:55 런어웨이 태그 직후 잡아둔 피터팬 LL(18~19시 리턴)로 탑승. LL 매진이었다면 스탠바이 30~40분. 시나리오 1(낮에 탑승 완료)이면 이 스톱은 건너뛰고 앨리스로 직행."},
+  {n:14, x:554, y:588, t:"19:10", type:"sb", title:"이상한 나라의 앨리스", desc:"시나리오 1이면 18:40으로 당겨 타고 퍼레이드 자리도 일찍 확보. 시나리오 2면 피터팬 직후 19:10 탑승(바로 옆). 저녁 시간대라 대기 25~35분."},
+  {n:15, x:470, y:790, t:"19:45", type:"show", title:"퍼레이드 자리 → 야간쇼 🎆", desc:"시나리오 1은 19:30, 시나리오 2는 19:50쯤 메인 스트리트 돗자리 자리잡기 → 20:45 Paint the Night → 21:30 불꽃놀이로 피날레!"},
 ];
 
 const svg = document.querySelector('svg');
